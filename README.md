@@ -26,9 +26,10 @@ Desenvolver uma comanda virtual que resolva as limitações do modelo tradiciona
 
 ---
 
-#Equipe 
--Leonardo Somavila Ferrari
--Guilherme Lopes de Almeida
--Leandro Martins Reali Ribeiro
--Guilherme Henrique Alves Santos
--Matheus Carriero
+## Equipe 
+- Leonardo Somavila Ferrari
+- Guilherme Lopes de Almeida
+- Leandro Martins Reali Ribeiro
+- Guilherme Henrique Alves Santos
+- Matheus Carriero
+---
