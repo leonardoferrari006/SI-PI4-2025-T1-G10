@@ -1,4 +1,4 @@
-# Comanda Virtual - Projeto Acadêmico
+# TôNaMesa
 
 ## Descrição
 Este projeto propõe a digitalização das comandas em bares e restaurantes, substituindo os modelos tradicionais em papel ou cartão plástico por uma solução web e mobile-friendly.  
