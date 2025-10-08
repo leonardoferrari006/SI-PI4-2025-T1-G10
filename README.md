@@ -2,7 +2,7 @@
 
 ## Descrição
 Este projeto propõe a digitalização das comandas em bares e restaurantes, substituindo os modelos tradicionais em papel ou cartão plástico por uma solução web e mobile-friendly.  
-O sistema permite que os clientes façam pedidos diretamente pelo celular, acompanhem os gastos em tempo real, entrem em filas digitais e realizem pagamentos online (PIX, cartão, carteira digital).
+O sistema permite que os clientes façam pedidos diretamente pelo celular, acompanhem os gastos em tempo real, entrem em filas digitais.
 
 ---
 
