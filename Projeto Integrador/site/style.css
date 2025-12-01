@@ -1,0 +1,151 @@
+/* Custom styles used by the SPA (complementa Tailwind) */
+
+/* Material icons tuning */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+body {
+  min-height: max(884px, 100dvh);
+}
+
+/* Category cards (reused classes from original) */
+.card-category {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  transition: .15s;
+}
+
+.dark .card-category {
+  background: #4B5563;
+}
+
+.card-category:hover {
+  transform: translateY(-2px);
+}
+
+.category-icon {
+  width: 4rem;
+  height: 4rem;
+  background: #e5e7eb;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .category-icon {
+  background: #475569;
+}
+
+.category-title {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.dark .category-title {
+  color: #f3f4f6;
+}
+
+/* Highlighted category */
+.card-category-highlight {
+  background: #F97316;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Item cards */
+.item-card {
+  background: white;
+  border-radius: .5rem;
+  padding: .75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dark .item-card {
+  background: #4B5563;
+}
+
+.item-thumb {
+  width: 5rem;
+  height: 5rem;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.item-title {
+  font-weight: 700;
+  color: #111827;
+}
+
+.dark .item-title {
+  color: white;
+}
+
+.item-desc {
+  font-size: .875rem;
+  color: #6b7280;
+}
+
+.dark .item-desc {
+  color: #d1d5db;
+}
+
+.item-price {
+  margin-top: .5rem;
+  font-weight: bold;
+  color: #F97316;
+}
+
+/* Button small add */
+.btn-add {
+  background: #F97316;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+/* Orders badge */
+#orders-badge {
+  font-size: 0.72rem;
+}
+
+/* Orders list */
+.order-row {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: space-between;
+  gap: .75rem;
+  align-items: center;
+}
+
+.dark .order-row {
+  background: #374151;
+}
+
+/* Small helpers */
+.hidden { display: none !important; }
