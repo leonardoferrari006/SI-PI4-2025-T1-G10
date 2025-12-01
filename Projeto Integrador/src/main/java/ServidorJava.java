@@ -34,7 +34,6 @@ public class ServidorJava {
 
         OutputStream saida = cliente.getOutputStream();
 
-        // Ler a primeira linha do pedido HTTP
         String linha = entrada.readLine();
 
         if (linha == null || linha.isEmpty()) {
@@ -46,6 +45,7 @@ public class ServidorJava {
 
         String[] partes = linha.split(" ");
         String caminho = partes[1];
+        caminho = URLDecoder.decode(caminho, "UTF-8");
 
         if (caminho.equals("/")) {
             caminho = "/index.html";
@@ -65,6 +65,7 @@ public class ServidorJava {
         }
 
         String tipo = Files.probeContentType(arquivo.toPath());
+        if (tipo == null) tipo = "application/octet-stream";
 
         byte[] conteudo = Files.readAllBytes(arquivo.toPath());
 
