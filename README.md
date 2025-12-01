@@ -33,3 +33,9 @@ Desenvolver uma comanda virtual que resolva as limitações do modelo tradiciona
 - Guilherme Henrique Alves Santos
 - Matheus Carriero
 ---
+
+## Como usar o servidor 
+- Entrar na pasta do projeto
+- Compilar o projeto: mvn package
+- Rodar o servidor: java -jar target/servidor-java-1.0.0.jar
+- Abrir o link no navegador: http://localhost:8080
