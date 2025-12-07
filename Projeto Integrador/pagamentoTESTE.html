@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pagamento - TaNaMesa</title>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec7f13",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221910",
+              "text-light": "#181411",
+              "text-dark": "#f8f7f6",
+              "text-subtle-light": "#897561",
+              "text-subtle-dark": "#a19487",
+              "card-light": "#ffffff",
+              "card-dark": "#2a2016",
+              "border-light": "#e6e0db",
+              "border-dark": "#40352a"
+            },
+            fontFamily: {
+              "display": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<div class="flex items-center bg-card-light dark:bg-card-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-text-light dark:text-text-dark flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Pagamento</h2>
+<div class="w-12"></div>
+</div>
+<!-- Main Content -->
+<main class="flex-1">
+<!-- Card -->
+<div class="p-4">
+<div class="flex items-center justify-between gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+<div class="flex flex-col gap-1">
+<p class="text-text-light dark:text-text-dark text-base font-bold leading-tight">Total a Pagar</p>
+<p class="text-text-subtle-light dark:text-text-subtle-dark text-xl font-semibold leading-normal">R$ 128,50</p>
+</div>
+<div class="flex items-center justify-center size-14 bg-primary/20 rounded-full text-primary">
+<span class="material-symbols-outlined !text-3xl">receipt_long</span>
+</div>
+</div>
+</div>
+<!-- SectionHeader -->
+<h3 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Escolha a forma de pagamento</h3>
+<!-- RadioList -->
+<div class="flex flex-col gap-3 p-4" style="--radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(236,127,19)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');">
+<label class="flex items-center gap-4 rounded-lg border border-solid border-border-light dark:border-border-dark p-[15px] has-[:checked]:border-primary dark:has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">credit_card</span>
+<div class="flex grow flex-col"><p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Cartão de Crédito</p></div>
+<input checked="" class="h-5 w-5 border-2 border-border-light dark:border-border-dark bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio"/>
+</label>
+<label class="flex items-center gap-4 rounded-lg border border-solid border-border-light dark:border-border-dark p-[15px] has-[:checked]:border-primary dark:has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">credit_card</span>
+<div class="flex grow flex-col"><p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Cartão de Débito</p></div>
+<input class="h-5 w-5 border-2 border-border-light dark:border-border-dark bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio"/>
+</label>
+<label class="flex items-center gap-4 rounded-lg border border-solid border-border-light dark:border-border-dark p-[15px] has-[:checked]:border-primary dark:has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">qr_code_2</span>
+<div class="flex grow flex-col"><p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Pix</p></div>
+<input class="h-5 w-5 border-2 border-border-light dark:border-border-dark bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio"/>
+</label>
+<label class="flex items-center gap-4 rounded-lg border border-solid border-border-light dark:border-border-dark p-[15px] has-[:checked]:border-primary dark:has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">deck</span>
+<div class="flex grow flex-col"><p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Pagar na Mesa</p></div>
+<input class="h-5 w-5 border-2 border-border-light dark:border-border-dark bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio"/>
+</label>
+</div>
+<!-- Credit Card Form -->
+<div class="flex flex-col gap-4 px-4 py-3">
+<!-- TextField: Card Number -->
+<label class="flex flex-col w-full">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Número do Cartão</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark focus:border-primary dark:focus:border-primary h-14 placeholder:text-text-subtle-light dark:placeholder:text-text-subtle-dark p-[15px] text-base font-normal leading-normal" placeholder="0000 0000 0000 0000" value=""/>
+</label>
+<!-- TextField: Cardholder Name -->
+<label class="flex flex-col w-full">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Nome no Cartão</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark focus:border-primary dark:focus:border-primary h-14 placeholder:text-text-subtle-light dark:placeholder:text-text-subtle-dark p-[15px] text-base font-normal leading-normal" placeholder="Seu nome completo" value=""/>
+</label>
+<!-- Expiry Date & CVV -->
+<div class="flex items-end gap-4 w-full">
+<label class="flex flex-col min-w-0 flex-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Validade</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark focus:border-primary dark:focus:border-primary h-14 placeholder:text-text-subtle-light dark:placeholder:text-text-subtle-dark p-[15px] text-base font-normal leading-normal" placeholder="MM/AA" value=""/>
+</label>
+<label class="flex flex-col min-w-0 flex-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">CVV</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark focus:border-primary dark:focus:border-primary h-14 placeholder:text-text-subtle-light dark:placeholder:text-text-subtle-dark p-[15px] text-base font-normal leading-normal" placeholder="123" value=""/>
+</label>
+</div>
+<!-- Save Card Checkbox -->
+<label class="flex items-center gap-3 py-2">
+<input class="form-checkbox h-5 w-5 rounded border-border-light dark:border-border-dark text-primary focus:ring-primary/50 bg-card-light dark:bg-card-dark" type="checkbox"/>
+<span class="text-text-light dark:text-text-dark text-sm font-medium">Salvar cartão para uso futuro</span>
+</label>
+</div>
+<!-- CTA Button -->
+<div class="p-4 pt-6">
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-center font-bold text-white shadow-sm transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 dark:ring-offset-background-dark">
+<span class="material-symbols-outlined">lock</span>
+<span>Pagar R$ 128,50</span>
+</button>
+</div>
+</main>
+<!-- Fixed Footer Navigation -->
+<footer class="fixed bottom-0 left-0 right-0 z-10 border-t border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+<div class="flex h-16 items-center justify-around">
+<a class="flex flex-col items-center justify-center gap-1 text-text-subtle-light dark:text-text-subtle-dark" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="text-xs font-medium">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">receipt</span>
+<span class="text-xs font-bold">Conta</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-text-subtle-light dark:text-text-subtle-dark" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-xs font-medium">Pedidos</span>
+</a>
+</div>
+</footer>
+</div>
+</body></html>
